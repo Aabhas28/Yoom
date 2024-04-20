@@ -7,7 +7,7 @@ const STREAM_API_KEY = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 const STREAM_API_SECRET = process.env.STREAM_SECRET_KEY;
 
 export const tokenProvider = async () => {
-  const user = await currentUser();
+  const user = await currentUser();  
 
   if (!user) throw new Error('User is not authenticated');
   if (!STREAM_API_KEY) throw new Error('Stream API key secret is missing');
